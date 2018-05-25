@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Universal Scale</title>
+  </head>
+  <body>
+    <h1>Your weight on another planet!</h1>
+    <p>On Earth you weigh differently than on Mars or Jupiter</p>
+    <script type="text/javascript">
+      var weightUser = parseFloat(prompt("What is your weight?"));
+      var planet = parseInt(prompt("Choose your planet:\n1. Mars\n2. Jupiter"));
+      var gEarth = 9.81;
+      var gMars = 3.7;
+      var gJupiter = 24.8;
+      var finalWeight;
+      var textPlanet;
+      if (planet == 1) {
+        finalWeight = parseInt(weightUser * gMars / gEarth);
+        textPlanet = "Mars";
+      }
+      else if (planet == 2) {
+        finalWeight = parseInt(weightUser * gJupiter / gEarth);
+        textPlanet = "Jupiter";
+      }
+      else {
+        finalWeight = 10000000000000000000;
+        textPlanet = "Tangamandapio";
+      }
+      document.write("Your wieght on " + textPlanet + " is <strong>" + finalWeight + " Kg</strong>")
+    </script>
+  </body>
+</html>
